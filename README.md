@@ -181,5 +181,5 @@ There is a mapping between some parameters.
 
 A quirk of the DLL file is that only parameters of the most recent measurement
 channel can be read. To mitigate this, all of the recent parameters are stored 
-locally in a set specific dictionary (default)/  logged so that any parameters 
+locally in a set specific dictionary so that any parameters 
 can be read at any time AFTER they have been measured once. 
