@@ -143,41 +143,41 @@ written to the LCR bridge via .writevar() / .init_channel() at anytime.
 
 There is a mapping between some parameters. 
 
-Byte type parameters - b_p (int) 
-    Active  # 0-off, 1-on
-    Channeltype * # Set channel type. 0-2p, 1-4p, 2-4p with input transformer
-    Channelno * # Set physical channel. 0 is internal reference ( 1 kOhm for 4p, 20 kOhm for 2p)
-    ReferenceNo # Reference impedance for 2p channel.  0-1000 pF, 1-20 kOhm, 2-100 pF
-    RLCselect # Set expected load type. 0-R, 1-L, 2-C, 3-Auto
-    Savedata 
-    Linverted # Invert the output polarity of the mutual inductace measurement
-    Menuactive 
-    HighGain 
-    RLCmodel 
+**Byte type parameters - b_p (int)**
+- Active  # 0-off, 1-on
+- Channeltype * # Set channel type. 0-2p, 1-4p, 2-4p with input transformer
+- Channelno * # Set physical channel. 0 is internal reference (1 kOhm for 4p, 20 kOhm for 2p)
+- ReferenceNo # Reference impedance for 2p channel. 0-1000 pF, 1-20 kOhm, 2-100 pF
+- RLCselect # Set expected load type. 0-R, 1-L, 2-C, 3-Auto
+- Savedata
+- Linverted # Invert the output polarity of the mutual inductance measurement
+- Menuactive
+- HighGain
+- RLCmodel
 
-Double type parameters - d_p (float)
-    Frequency * # Reference frequency (Hz)
-    Voltage * # Excitation voltage (V)
-    Current * # Excitation current (A)
-    IntegrationTime * # (s)
-    RepetitionTime # (s)
-    GraphFilterTime # (s)
+**Double type parameters - d_p (float)**
+- Frequency * # Reference frequency (Hz)
+- Voltage * # Excitation voltage (V)
+- Current * # Excitation current (A)
+- IntegrationTime * # (s)
+- RepetitionTime # (s)
+- GraphFilterTime # (s)
 
-Channel parameters - c_p
-    set_num # Position of measurement channel in sequence, starts at 0
-    set_char # Position of measurement channel in sequence, starts at A
-    ch_num *b (see above, b_p)
-    ch_type *b
-    freq *d
-    tau_int *d
-    I_exc *d
-    V_exc *d
-    SNR # Signal-to-noise ratio
-    V_noise # Voltage noise (V)
-    P_diss # Power dissapation (W)
-    z-type *b
-    z-val # Impedance value (Ohms/ H/ F)
-    z-unit # Unit
+**Channel parameters - c_p**
+- set_num # Position of measurement channel in sequence, starts at 0
+- set_char # Position of measurement channel in sequence, starts at A
+- ch_num *b (see above, b_p)
+- ch_type *b
+- freq *d
+- tau_int *d
+- I_exc *d
+- V_exc *d
+- SNR # Signal-to-noise ratio
+- V_noise # Voltage noise (V)
+- P_diss # Power dissipation (W)
+- z-type *b
+- z-val # Impedance value (Ohms/ H/ F)
+- z-unit # Unit
 
 A quirk of the DLL file is that only parameters of the most recent measurement
 channel can be read. If you asked it for the Frequency of channel 0, it would 
