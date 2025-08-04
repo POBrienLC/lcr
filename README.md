@@ -94,7 +94,7 @@ internal reference).
 The measurement parameters of a set [0-10] are set via 
 
 ```python
->>> LCR.init_channel([0-10])
+>>> d.init_channel([0-10])
 ```
 
 where the argument is an integer corresponding to the [0-10]th measurement. Other
@@ -105,7 +105,7 @@ and inductors are in the labview software after calibration.
 Specific parameters can be updated after initialization of a channel by using
 
 ```python
->>> LCR.writevar([0-10], [param], [value])
+>>> d.writevar([0-10], [param], [value])
 ```
 
 The physical channel is determined upon initialization by the "channel_no" 
@@ -127,7 +127,7 @@ is required e.g. if using a certain thermometer for PID control.
 Measurement data is transfered to the control PC via
 
 ```python
->>> LCR.transfer_data()
+>>> d.transfer_data()
 ```
 
 which returns the most recent measurement (or nothing). New data is not transfered 
