@@ -3,7 +3,7 @@ Filename: README
 Author: Patrick O'Brien `<patrick@leidencryogenics.com>`
 
 This python script acts as a controller for the Leiden Cryogenics
-resistance bridge. 
+impedance bridge. 
 
 The heart of the resistance bridge is a National Instruments 
 NI-USB-6215 unit which performs analog-digital and DA conversion. 
