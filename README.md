@@ -12,7 +12,7 @@ The incoming data needs to be unpacked on the control PC side.
 
 The brain of the resistance bridge is a dynamic link library (DLL) 
 file. The DLL file writes instructions and reads measurement data.
-Communication to the DLL file is done via python. The 32-bit
+Communication to the DLL file is done via python in this driver wrapper. The 32-bit
 architecture of this DLL file has to match that of your python 
 interperator. This means running the LCR wrapper from a 32-bit
 python environment (more below). 
